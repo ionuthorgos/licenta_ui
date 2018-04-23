@@ -1,0 +1,170 @@
+<div class="container">
+  <div class="row centered-form">
+    <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please sign up </h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text"  class="form-control input-sm" id="firstname" placeholder="First Name" required minlength="5" maxlength="50" [(ngModel)] = "model.firstname" name="firstname" #firstname="ngModel">
+                  <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="text-danger">
+                    <!--<div [hidden]="!firstname.errors.required">
+                      Firstname is required
+                    </div>-->
+                    <div [hidden]="!firstname.errors.minlength">
+                      Firstname must be at least 5 characters long.
+                    </div>
+                    <div [hidden]="!firstname.errors.maxlength">
+                      Firstname cannot be more than 50 characters long.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group"><input type="text" name="lastname" id="lastname" class="form-control input-sm" required minlength="5" maxlength="200"  [(ngModel)] = "model.lastname" #lastname="ngModel" placeholder="Last Name">
+                  <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="text-danger">
+                    <!--<small [hidden]="!lastname.errors.required">
+                      Firstname is reguired
+                    </small>-->
+                    <small [hidden]="!lastname.errors.minlength">
+                      Lastname must be at least 3 characters long.
+                    </small>
+                    <div [hidden]="!lastname.errors.maxlength">
+                      Firstname cannot be more than 50 characters long.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" class="form-control input-sm" required [email]="model.email!==''"
+                     name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email Address">
+              <div *ngIf="email.errors && email.touched">
+                <small [hidden]="!email.errors.required" class="text-danger">
+                  Email is reguired
+                </small>
+                <small [hidden]="!email.errors.email" class="text-danger">
+                  Email is invalid
+                </small>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="Password"
+                         [(ngModel)]="model.password"
+                         required validateEqual="confirmPassword" reverse="true" #password="ngModel">
+                  <small [hidden]="password.valid || (password.pristine && !f.submitted)" class="text-danger">
+                    Password is required
+                  </small>
+                </div>
+                </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" class="form-control" name="confirmPassword" placeholder="ConfirmPassword"
+                         [(ngModel)]="model.confirmPassword"
+                         required validateEqual="password" reverse="false" #confirmPassword="ngModel">
+                  <small [hidden]="confirmPassword.valid || (confirmPassword.pristine && !f.submitted)"
+                         class="text-danger">
+                    Password mismatch
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" value="Register" class="btn btn-info btn-block">
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please sign up </h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text"  class="form-control input-sm" id="firstname" placeholder="First Name" required minlength="5" maxlength="50" [(ngModel)] = "model.firstname" name="firstname" #firstname="ngModel">
+                  <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="text-danger">
+                    <!--<div [hidden]="!firstname.errors.required">
+                      Firstname is required
+                    </div>-->
+                    <div [hidden]="!firstname.errors.minlength">
+                      Firstname must be at least 5 characters long.
+                    </div>
+                    <div [hidden]="!firstname.errors.maxlength">
+                      Firstname cannot be more than 50 characters long.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group"><input type="text" name="lastname" id="lastname" class="form-control input-sm" required minlength="5" maxlength="200"  [(ngModel)] = "model.lastname" #lastname="ngModel" placeholder="Last Name">
+                  <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="text-danger">
+                    <!--<small [hidden]="!lastname.errors.required">
+                      Firstname is reguired
+                    </small>-->
+                    <small [hidden]="!lastname.errors.minlength">
+                      Lastname must be at least 3 characters long.
+                    </small>
+                    <div [hidden]="!lastname.errors.maxlength">
+                      Firstname cannot be more than 50 characters long.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" class="form-control input-sm" required [email]="model.email!==''"
+                     name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email Address">
+              <div *ngIf="email.errors && email.touched">
+                <small [hidden]="!email.errors.required" class="text-danger">
+                  Email is reguired
+                </small>
+                <small [hidden]="!email.errors.email" class="text-danger">
+                  Email is invalid
+                </small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="Password"
+                         [(ngModel)]="model.password"
+                         required validateEqual="confirmPassword" reverse="true" #password="ngModel">
+                  <small [hidden]="password.valid || (password.pristine && !f.submitted)" class="text-danger">
+                    Password is required
+                  </small>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="password" class="form-control" name="confirmPassword" placeholder="ConfirmPassword"
+                         [(ngModel)]="model.confirmPassword"
+                         required validateEqual="password" reverse="false" #confirmPassword="ngModel">
+                  <small [hidden]="confirmPassword.valid || (confirmPassword.pristine && !f.submitted)"
+                         class="text-danger">
+                    Password mismatch
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" value="Register" class="btn btn-info btn-block">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

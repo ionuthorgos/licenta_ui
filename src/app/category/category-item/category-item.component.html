@@ -1,0 +1,20 @@
+<!--<p>-->
+  <!--category-item works!-->
+<!--</p>-->
+
+<!--varstae este {{person.age}}-->
+
+<!--<button (click)="maresteVarsta()">mareste</button>-->
+
+<!--<pre>{{category | json}} </pre>-->
+
+<div class="category-item" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()"
+      [ngClass]='custClass'>
+  <div >
+        <span (click)="startEditCategory(categ)">{{category.name}} </span>
+        <button class="category-delete" (click)="delete()">delete</button>
+        <button class="category-delete" (click)="startEditCategory($event)">edit</button>
+  </div>
+  <div class="date">{{category.added}}</div>
+</div>
+

@@ -1,0 +1,22 @@
+.category-item{
+  color: #ff2217;
+  .category-delete{
+    display: none;
+    color: #203bff;
+  }
+  &.over{
+    .category-delete{
+      display: inline-block;
+    }
+  }
+  /* &:hover {
+      color:red;
+      .category-delete{
+        display: inline-block;
+        color: #070205;
+      }
+  }*/
+}
+.date{
+  color: green;
+}

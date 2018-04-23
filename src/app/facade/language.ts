@@ -1,0 +1,127 @@
+// import { Injectable } from '@angular/core';
+//
+// @Injectable()
+
+export default new class Language {
+
+  lang : any = {
+    "empty_name": "Introduceti numele",
+    "email_used": "Emailul este deja folosit",
+    "invalid_email": "email invalid",
+    "invalid_password": "Email sau parola sunt introduse gresit",
+    "invalid_old_password": "Invalid old password",
+    "invalid_new_password": "Invalid new password",
+    "old_password_not_match": "Old password not match",
+    "user_not_found": "User not found",
+    "required":"Camp obligatoriu",
+    "account_exists":"Acest email este deja inregistrat. Folositi ecranul de logare sau resetare parola",
+    "password":"Parola",
+    "confirmation_code":"Codul de confirmare nu este corect",
+    "user_confirmed":"Contul de email a fost confirmat",
+    "password_confirm":"Confirmare Parola",
+    "email":"Email",
+    "password_different":"Parola de confirmare nu este la fel cu parola ",
+    "terms":"Termeni si conditii",
+    "check_forgot_password":"Verificati adresa de email pentru a seta o noua parola",
+    "password_changed":"Parola a fost schimbata",
+    "security_code":"Parola nu a putut fi schimbata.",
+    "invalid_token":"Codul de securitate a expirat. Va rugam sa reintroduceti emailul si parola in fereastra de logare",
+    "edit_profile":"Profilul meu",
+    "change_password":"Schimbare Parola",
+    "log_out":"Deautentificare",
+    "max_length":"Numarul de caractere este limitat la 50",
+    "email_new_password":"Parola noua",
+    "search":"Cautare",
+    "hello":"Buna",
+    "registerok":"Contul a fost creat cu succes",
+    "verifyemailaddress":"Va rugam verificati contul de email pentru a valida adresa de email",
+    "gotouserprofile":"Pentru a adauga servicii, trebuie sa completezi profilul",
+    "add_new_service":"Adaugare serviciu nou",
+    "delete_service":"Stergere serviciu",
+    "inactivate":"Dezactiveaza",
+    "no_coordonates":"<row>Profilul tau nu are setat coordonatele unde locuiesti </row> </br> Te rugam sa mergi la pagina ta de profil pentru a seta aceste informatii ",
+    "remaining_char":"Caractere ramase",
+    "title":"Titlu",
+    "service_name":"Nume domeniu",
+    "description":"Descriere",
+    "det_desc":"Descriere detaliate",
+    "photos":"Fotografii",
+    "new_img":"Adauga imagne",
+    "save":"Salveaza",
+    "my_services":"Serviciile mele",
+    "my_companies":"Companii",
+    "del":"Sterge",
+    "avail":"Activeaza",
+    "inact":"Dezactiveaza",
+    "edit":"Editeaza",
+    "service":"serviciu",
+    "del_conf":"Sunteti sigur ca vreti sa stergeti {0} {1}?",
+    "cat":"Categorie",
+    "searchOptions":[{ "id":1, "name":"Produse" },{ "id":2, "name":"Servicii" },{ "id":3, "name":"Transport" },{ "id":4, "name":"Evenimente" }],
+    "lic":{
+      "SCD" :"Suprafata construita",
+      "SUtil" :"Suprafata utila",
+      "Stadiu":"Stadiu",
+      "NrCam":"Numar Camere",
+      "RegimIn" :"Regim",
+      "Street":"Strada",
+      "Etaj":"Etaj",
+      "Anc":"An constructie"
+    },
+    "screen": {
+      "create_user":"Utilizator nou",
+      "login":"Logare",
+      "login_screen": {
+        "title":"Logare",
+        "desc":"Introduceti adresa de email si parola",
+        "help":"",
+        "email":"Email",
+        "name": "Nume",
+        "password": "Parola",
+        "forgot":"Am uitat parola",
+        "login":"Logare",
+        "remember":"pastreaza parola pe acest calculator"
+      },
+      "create_user_screen": {
+        "title":"Utilizator nou",
+        "desc":"Introduceti adresa de email si parola",
+        "help":"Dupa inregistrare, verificati casuta de email pentru validare adresei",
+        "email":"Email",
+        "name": "Nume",
+        "password": "Parola",
+        "confirm":"Confirmare Parola",
+        "create_user": "Inregistrare",
+        "have_account":"Ai cont?",
+        "login_here":"Ecranul de logare"
+      },
+      "change_password_screen": {
+        "title":"Schimbare Parola",
+        "desc":"Schimbare Parola",
+        "help":"Schimbare Parola",
+        "old":"Parola actuala",
+        "new": "Parola noua",
+        "confirm":"Confirmare Parola",
+        "change": "Schimbare Parola"
+      },
+      "profile": {
+        "title":"Modificare date personale",
+        "desc":"Info",
+        "help":"Schimbare date",
+        "avatar":"Fotografie profil",
+        "first_name":"Nume",
+        "last_name": "Prenume",
+        "nick":"Nume utilizator",
+        "address": "Adresa",
+        "phone": "Telefon",
+        "country":"Tara",
+        "birthday":"Data Nasterii",
+        "gendre":"Gen",
+        "man":"Masculin",
+        "woman":"Feminin",
+        "action":"Salveaza"
+      }
+
+    }
+  }
+}
+

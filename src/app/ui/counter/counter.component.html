@@ -1,0 +1,21 @@
+<p>
+  counter works!
+</p>
+<p>
+  hello works!
+</p>
+buna echipa!
+
+
+
+<label> {{valoare}} </label>
+
+<button class="btn btn-success inregistrarebtn center-block" (click)="add()">ADAUGA</button>
+
+<button class="btn btn-success inregistrarebtn center-block" (click)="scade()" [disabled]="valoare==0">SCADE</button>
+
+
+<input type="text" [(ngModel)]="helloIonut" class="form-control">
+{{helloIonut}}
+
+<div *ngFor="let person of list">{{person.nume}}</div>

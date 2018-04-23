@@ -1,0 +1,21 @@
+
+<label class="{{fileClass}}" ondragover="return false;"
+       [class.loaded]="loaded"
+       [style.outlineColor]="dragging ? activeColor : baseColor"
+       (dragenter)="handleDragEnter()"
+       (dragleave)="handleDragLeave()"
+       (drop)="handleDrop($event)">
+
+  <i class="icon icon-upload" *ngIf="!loaded"
+     [style.color]="dragging
+            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+            : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+
+  <img
+    [src]="imageSrc"
+    (load)="handleImageLoad()"
+    [class.loaded]="imageLoaded"/>
+  <input type="file" name="file" accept="image/*"
+         (click)="handleClick($event)"
+         (change)="handleInputChange($event)">
+</label>

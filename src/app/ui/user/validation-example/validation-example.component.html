@@ -1,0 +1,76 @@
+<!--
+<form #passwordResetForm="ngForm"   (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="email" id="email" class="form-control" required
+           name="email" placeholder="type in your email you used for registering" [(ngModel)]="passRes.email"
+           email pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" #email="ngModel">
+    <div *ngIf="email.errors && (email.dirty || email.touched)"
+         class="alert alert-danger">
+      <div>
+        &lt;!&ndash;<pre> {{email.errors | json}}</pre>&ndash;&gt;
+      </div>
+      <div [hidden]="!email.errors.required">
+        email is required
+      </div>
+      <div [hidden]="!email.errors.pattern">
+        Email invalid
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="newPassword">new password</label>
+    <input type="text" id="newPassword" class="form-control" required minlength="8" maxlength="24"
+           name="newPassword" placeholder="type in your new password" [(ngModel)]="passRes.newPassword" #newPassword="ngModel">
+    <div *ngIf="newPassword.errors && newPassword.touched"
+         class="alert alert-danger">
+      <div [hidden]="!newPassword.errors.required">
+        your new password is required
+      </div>
+      <div [hidden]="!newPassword.errors.minlength">
+        password must be at least 8 characters long
+      </div>
+      <div [hidden]="!newPassword.errors.maxlength">
+        password cannot be more than 24 characters long
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="confirmPassword">confirm password</label>
+    <input type="text" id="confirmPassword" class="form-control" required minlength="8" maxlength="24"
+           name="confirmPassword" placeholder="confirm your new password" [(ngModel)]="passRes.confirmPassword" #confirmPassword="ngModel">
+    <div *ngIf="confirmPassword.errors && confirmPassword.touched"
+         class="alert alert-danger">
+      <div [hidden]="!confirmPassword.errors.required">
+        password confirmation is required & must match your new password
+      </div>
+      <div [hidden]="!confirmPassword.errors.minlength">
+        password must be at least 8 characters long & must match your new password
+      </div>
+      <div [hidden]="!confirmPassword.errors.maxlength">
+        password cannot be more than 24 characters long
+      </div>
+    </div>
+  </div>
+
+
+    <button type="submit" class="btn btn-default" [disabled]="passwordResetForm.invalid">
+      submit
+    </button>
+
+
+  <button type="button" class="btn btn-default" (click)="passwordResetForm.resetForm({})">reset</button>
+
+  <button type="button" class="btn btn-default">
+  <nav>
+    <a routerLink="/">home</a>
+  </nav>
+  </button>
+
+
+</form>
+-->
+validation care l-am pus in comentarii
